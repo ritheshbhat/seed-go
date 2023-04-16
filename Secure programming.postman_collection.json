@@ -1,0 +1,97 @@
+{
+	"info": {
+		"_postman_id": "f4ced5cd-ee7f-425a-bbfe-8587ac8ea9fd",
+		"name": "Secure programming",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11153661"
+	},
+	"item": [
+		{
+			"name": "create phonebook",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"rithesh\",\r\n    \"phone\": \"9538058\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/PhoneBook/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"PhoneBook",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get phonebook",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/PhoneBook/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"PhoneBook",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete by name",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/PhoneBook/deleteByName?name=rithesh",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"PhoneBook",
+						"deleteByName"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "rithesh"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete by number",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
